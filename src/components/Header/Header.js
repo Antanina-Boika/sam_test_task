@@ -1,4 +1,4 @@
-import style from './Header.module.css'
+import style from "./Header.module.css";
 
 const Header = () => {
   return (
@@ -6,6 +6,6 @@ const Header = () => {
       <h1>SHOP NAME</h1>
     </div>
   );
-}
+};
 
 export default Header;

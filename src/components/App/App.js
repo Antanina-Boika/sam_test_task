@@ -3,13 +3,14 @@ import Main from "components/Main";
 import Cart from "components/Cart";
 import { useState } from "react";
 import { useEffect } from "react";
-import React from "react";
 import style from "./App.module.css";
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
   const [total, setTotal] = useState(0);
+
+  const [successfulOrder, setSuccessfulOrder] = useState(false);
 
   useEffect(() => {
     const total = cart.reduce((prev, curr) => {
@@ -23,9 +24,17 @@ const App = () => {
     setCart((currentCart) => currentCart.filter((product) => id != product.id));
   };
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSuccessfulOrder(false);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  });
+
   const clearData = () => {
     const newCart = [];
     setCart(newCart);
+    setSuccessfulOrder(true);
   };
 
   const addCount = (id) => {
@@ -78,15 +87,20 @@ const App = () => {
     <div className={style.app_container}>
       <Header />
       <Main appendToCart={appendToCart} />
-      <Cart
-        cart={cart}
-        total={total}
-        addCount={addCount}
-        changeInputValue={changeInputValue}
-        deleteCount={deleteCount}
-        deleteItem={deleteItem}
-        clearData={clearData}
-      />
+      <div>
+        <Cart
+          cart={cart}
+          total={total}
+          addCount={addCount}
+          changeInputValue={changeInputValue}
+          deleteCount={deleteCount}
+          deleteItem={deleteItem}
+          clearData={clearData}
+        />
+        {successfulOrder && (
+          <p className={style.successful_order}>Спасибо за заказ!</p>
+        )}
+      </div>
     </div>
   );
 };

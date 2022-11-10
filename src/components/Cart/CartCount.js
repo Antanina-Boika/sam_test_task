@@ -1,6 +1,6 @@
 import styles from "./CartCount.module.css";
 
-const CartCount = ({ count, addCount, id, deliteCount, changeInputValue }) => {
+const CartCount = ({ count, addCount, id, deleteCount, changeInputValue }) => {
   return (
     <div className={styles.count_container}>
       <button
@@ -21,7 +21,7 @@ const CartCount = ({ count, addCount, id, deliteCount, changeInputValue }) => {
       <button
         className={styles.count_button}
         onClick={() => {
-          deliteCount(id);
+          deleteCount(id);
         }}
       >
         -

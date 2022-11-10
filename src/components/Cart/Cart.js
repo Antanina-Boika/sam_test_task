@@ -1,5 +1,4 @@
 import CartItems from "components/Cart/CartItems";
-import CartItemsMobole from "components/Cart/CartItemMobile";
 import styles from "./Cart.module.css";
 
 const Cart = ({
@@ -20,16 +19,20 @@ const Cart = ({
             <CartItems
               key={item.id}
               products={item}
-              deliteItem={deleteItem}
+              deleteItem={deleteItem}
               addCount={addCount}
-              deliteCount={deleteCount}
+              deleteCount={deleteCount}
               changeInputValue={changeInputValue}
             />
           );
         })}
       </div>
       <div className={styles.cart_footer}>TOTAL: {total} руб.</div>
-      <button className={styles.checkout} onClick={clearData}>
+      <button
+        className={styles.checkout}
+        disabled={!cart.length}
+        onClick={clearData}
+      >
         CHECKOUT
       </button>
     </div>

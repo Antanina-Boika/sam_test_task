@@ -17,12 +17,22 @@
   margin-top: 15px;
   margin-left: 10px;
   padding: 5px 10px;
-  border: 1 solid rgb(46, 46, 46);
+  border: 1px solid rgb(46, 46, 46);
   color: rgb(46, 46, 46);
   border-radius: 10px;
   font-weight: 900;
   width: 200px;
   text-align: center;
+}
+.cart_container .checkout:disabled {
+  background-color: #ccc;
+  color: rgb(88, 88, 88);
+  border: 1px solid #ccc;
+}
+.cart_container .checkout:disabled:hover {
+  background-color: #ccc;
+  color: rgb(88, 88, 88);
+  border: 1px solid #ccc;
 }
 .cart_container .checkout:hover {
   -webkit-transform: scale(1.2);

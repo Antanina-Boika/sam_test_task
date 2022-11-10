@@ -11,7 +11,7 @@
 }
 .count_container .count_button:hover {
   -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  transform: scale(1.4);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -22,11 +22,6 @@
 
 @media screen and (max-width: 970px) {
   .count_container .count_input {
-    width: 25px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .count_container .count_input {
-    width: 20px;
+    width: 30px;
   }
 }

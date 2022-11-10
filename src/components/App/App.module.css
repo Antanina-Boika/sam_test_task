@@ -1,12 +1,29 @@
 .app_container {
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 10px 0.5fr;
+  -ms-grid-columns: 1fr 15px 0.5fr;
   grid-template-columns: 1fr 0.5fr;
-  -ms-grid-rows: auto 10px auto;
+  -ms-grid-rows: auto 15px auto;
       grid-template-areas: "head head" "main cart";
-  grid-gap: 10px;
+  grid-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 90vw;
+}
+.app_container .successful_order {
+  color: rgb(220, 220, 220);
+  background-color: rgb(33, 32, 32);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 40px 20px;
+}
+
+@media screen and (max-width: 790px) {
+  .app_container {
+        grid-template-areas: "head head" "main main" "cart cart";
+  }
 }
