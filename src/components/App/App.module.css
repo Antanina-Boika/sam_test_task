@@ -1,0 +1,12 @@
+.app_container {
+  margin: 0;
+  padding: 0 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 0.5fr;
+  grid-template-columns: 1fr 0.5fr;
+  -ms-grid-rows: auto 10px auto;
+      grid-template-areas: "head head" "main cart";
+  grid-gap: 10px;
+  width: 90vw;
+}

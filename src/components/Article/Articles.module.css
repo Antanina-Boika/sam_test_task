@@ -1,0 +1,108 @@
+.article_container {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(199, 198, 198);
+  width: 220px;
+  height: 450px;
+}
+.article_container:hover {
+  -webkit-box-shadow: 0px 0px 26px 13px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 26px 13px rgba(34, 60, 80, 0.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  border: none;
+}
+.article_container .article_image {
+  height: 200px;
+  width: 180px;
+  margin: 0 auto;
+}
+.article_container .article_title {
+  color: rgb(46, 46, 46);
+}
+.article_container .article_description {
+  font-weight: 400;
+  color: rgb(73, 71, 71);
+  height: 100px;
+}
+.article_container .articte_price_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.article_container .articte_price_div .article_price {
+  color: rgb(33, 32, 32);
+  font-weight: 800;
+}
+.article_container .articte_price_div .add_to_cart_btn {
+  font-weight: 800;
+  color: rgb(33, 32, 32);
+  background-color: rgb(255, 255, 255);
+  border: 1 solid rgb(33, 32, 32);
+  border-radius: 5px;
+  padding: 1px 20px;
+  height: 40px;
+}
+.article_container .articte_price_div .add_to_cart_btn:hover {
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  background-color: rgb(33, 32, 32);
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 970px) {
+  .article_container {
+    padding: 10px;
+    width: 180px;
+    height: 410px;
+  }
+  .article_container .article_image {
+    height: 160px;
+    width: 140px;
+    margin: 0 auto;
+  }
+  .article_container .article_description {
+    font-weight: 300;
+  }
+  .article_container .article_price {
+    font-weight: 600;
+  }
+  .article_container .add_to_cart_btn {
+    font-weight: 600;
+    padding: 1px 15px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .article_container {
+    padding: 5px;
+    width: 130px;
+    height: 410px;
+  }
+  .article_container .article_image {
+    height: 110px;
+    width: 90px;
+    margin: 0 auto;
+  }
+  .article_container .article_description {
+    font-weight: 150;
+    height: 160px;
+    margin-right: 4px;
+  }
+  .article_container .article_price {
+    font-weight: 400;
+  }
+  .article_container .add_to_cart_btn {
+    font-weight: 200;
+    padding: 1px 5px;
+    height: 20px;
+  }
+}

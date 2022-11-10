@@ -1,0 +1,5 @@
+.header {
+  grid-area: head;
+  width: 90vw;
+  color: rgb(46, 46, 46);
+}

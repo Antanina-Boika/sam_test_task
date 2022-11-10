@@ -1,0 +1,32 @@
+.count_container {
+  display: flex;
+  gap: 5px;
+
+  .count_button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: large;
+
+    &:hover {
+      transform: scale(1.4);
+      transition: all 0.3s;
+    }
+  }
+
+  .count_input {
+    width: 40px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .count_container .count_input {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .count_container .count_input {
+    width: 20px;
+  }
+}
